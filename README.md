@@ -5,7 +5,7 @@ Script to generate aws4 signature to mage get and post requests to AWS elastic t
 
 Example usage:
 A job Post request:
-
+````` ruby
 params = {
   "Input" => {
     "Key" => key,
@@ -29,11 +29,13 @@ params = {
   qs = nil
   path = "/xxx/jobs"
   ETS.new(request_type, qs, body, path).post_request
-
+`````
 A get Jobs request:
 
+````` ruby
   body = nil
   request_type = "GET"
   qs = 'Ascending=true'
   path = "/xxx/jobsByPipeline/#{pipeline_id}"
   next_page = ETS.new(request_type, qs, body, path).get_request
+`````
