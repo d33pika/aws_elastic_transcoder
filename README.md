@@ -1,7 +1,7 @@
 aws_elastic_transcoder
 ======================
 
-Script to generate aws4 signature to mage get and post requests to AWS elastic transcoder. I extracted the aws4 logic from aws-sdk ruby gem.
+Script to generate aws4 signature to make GET and POST requests to AWS elastic transcoder. I extracted the aws4 signing logic from aws-sdk ruby gem.
 
 Example usage:
 A job Post request:
