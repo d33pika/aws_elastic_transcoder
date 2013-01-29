@@ -66,7 +66,6 @@ class ETS
     parts << datetime
     parts << credential_string(datetime)
     parts << hexdigest(canonical_request)
-    #puts(parts.join("\n"))
     parts.join("\n")
   end
 
@@ -87,7 +86,6 @@ class ETS
     parts << canonical_headers + "\n"
     parts << signed_headers
     parts << @headers['x-amz-content-sha256']
-    #puts(parts.join("\n"))
     parts.join("\n")
   end
 
