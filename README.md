@@ -24,13 +24,13 @@ params = {
     "PipelineId" => pipeline_id
   }
 
-A get Jobs request:
-
   body = JSON.generate(params)
   request_type = "POST"
   qs = nil
   path = "/xxx/jobs"
   ETS.new(request_type, qs, body, path).post_request
+
+A get Jobs request:
 
   body = nil
   request_type = "GET"
