@@ -27,7 +27,7 @@ params = {
   body = JSON.generate(params)
   request_type = "POST"
   qs = nil
-  path = "/xxx/jobs"
+  path = "/2012-09-25/jobs"
   ETS.new(request_type, qs, body, path).post_request
 `````
 A get Jobs request:
@@ -36,6 +36,6 @@ A get Jobs request:
   body = nil
   request_type = "GET"
   qs = 'Ascending=true'
-  path = "/xxx/jobsByPipeline/#{pipeline_id}"
+  path = "/2012-09-25/jobsByPipeline/#{pipeline_id}"
   next_page = ETS.new(request_type, qs, body, path).get_request
 `````
