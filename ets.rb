@@ -34,7 +34,7 @@ class ETS
     @canonical_uri=path
     @request_type= request_type
     @headers={
-      'host' => "xxx.us-east-1.aws.amazon.com",
+      'host' => "elastictranscoder.us-east-1.aws.amazon.com",
       'content-type' => 'application/x-amz-json-1.0'
     }
     @region = 'us-east-1'
@@ -160,10 +160,10 @@ class ETS
      @headers['x-amz-content-sha256'] ||= hexdigest(@body || '')
      @headers['authorization'] = authorization(datetime)
 
-     uri = URI("https://xxx.us-east-1.aws.amazon.com#{@path}")
+     uri = URI("https://elastictranscoder.us-east-1.aws.amazon.com#{@path}")
      request = Net::HTTP::Post.new(uri.path, initheader = @headers)
      request.body = @body
-     net = Net::HTTP.new("xxx.us-east-1.aws.amazon.com", "443")
+     net = Net::HTTP.new("elastictranscoder.us-east-1.aws.amazon.com", "443")
      net.use_ssl = true
      response = net.start do |http|
      http.request(request)
